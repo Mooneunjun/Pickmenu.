@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="offcanvas-button">打开 Offcanvas</button>
+        <h1>菜单</h1>
+      </nav>
+    </header>
+
+    <div id="offcanvas">
+      <div class="offcanvas-header">
+        <button id="offcanvas-close-button"></button>
+        <h2>Navbar</h2>
+      </div>
+      <ul>
+        <li><a href="#">添加菜单</a></li>
+        <li><a href="#">查看菜单</a></li>
+      </ul>
+    </div>
+    <div id="offcanvas-overlay" class="close"></div>
+
+    <div id="random-card">
+      <h2>随机抽选</h2>
+      <p>点击下方按钮随机抽选一个项目</p>
+      <button id="random-button">抽选</button>
+      <p id="random-result"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

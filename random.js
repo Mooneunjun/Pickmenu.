@@ -42,6 +42,6 @@ randomButton.addEventListener("click", function () {
       selectedMenuItem.rating +
       "</div>";
   } else {
-    randomResult.innerHTML = "没有选中任何菜单项";
+    randomResult.innerHTML = "메뉴 먼저 추가 하세요";
   }
 });

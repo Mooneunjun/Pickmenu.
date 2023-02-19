@@ -73,27 +73,6 @@ stars.forEach(function (star, index) {
 });
 ////
 //
-// 获取价格输入框和加减按钮
-var priceInput = document.getElementById("price-input");
-var addBtn = document.getElementById("add-btn");
-var minusBtn = document.getElementById("minus-btn");
-
-// 给加减按钮添加点击事件
-addBtn.addEventListener("click", function () {
-  var value = Number(priceInput.value) || 0;
-  value += 1000;
-  priceInput.value = value;
-});
-
-minusBtn.addEventListener("click", function () {
-  var value = Number(priceInput.value) || 0;
-  value -= 1000;
-  if (value < 0) {
-    value = 0;
-  }
-  priceInput.value = value;
-});
-//
 //
 //
 //

@@ -3,8 +3,6 @@ const offcanvas = document.getElementById("offcanvas");
 const offcanvasHeader = document.querySelector(".offcanvas-header");
 const offcanvasCloseButton = document.getElementById("offcanvas-close-button");
 const offcanvasOverlay = document.getElementById("offcanvas-overlay");
-const randomButton = document.getElementById("random-button");
-const randomResult = document.getElementById("random-result");
 var offcanvasLinks = document.querySelectorAll("#offcanvas ul li a");
 
 // 点击 Offcanvas 按钮打开 Offcanvas
@@ -80,6 +78,9 @@ function handleTouchMove(event) {
   currentX = event.touches[0].clientX;
   delta = currentX - startX;
 
+  // 添加 notransition 类，禁用过渡动画
+  offcanvas.classList.add("notransition");
+
   // 限制 Offcanvas 的左右拖动范围
   if (delta > 0) {
     delta = 0;
@@ -109,4 +110,7 @@ function handleTouchEnd(event) {
       link.classList.remove("active");
     });
   }
+
+  // 移除 notransition 类，重新启用过渡动画
+  offcanvas.classList.remove("notransition");
 }

@@ -4,16 +4,31 @@
   padding: 0;
 }
 
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
   color: #444;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
+  height: 60px;
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
 }
 
 nav {
@@ -38,13 +53,17 @@ nav h1 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 250px;
   height: 100%;
   background-color: #f8f8f8;
   padding: 20px;
-  transform: translateX(-220px);
+  transform: translateX(-260px);
   transition: transform 0.3s ease-in-out;
   z-index: 2;
+}
+
+.notransition {
+  transition: none !important;
 }
 
 #offcanvas.open {
@@ -63,6 +82,7 @@ nav h1 {
 }
 
 #offcanvas h2 {
+  color: #333;
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 20px;
@@ -164,22 +184,29 @@ nav h1 {
 }
 
 #random-card {
-  max-width: 600px;
+  flex-direction: column;
+  display: flex;
+  max-width: 1200px;
+
+  height: 69%;
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 #random-card h2 {
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 #random-card p {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 #random-card button {
@@ -192,6 +219,62 @@ nav h1 {
 }
 
 #random-result {
+  height: 20%;
   font-size: 24px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: 10px 20px;
+}
+
+.contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact li {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  background-color: #111;
+  padding: 10px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+  }
+  .footer h2 {
+    margin: 10px 0px;
+    font-size: 20px;
+  }
+
+  .footer li {
+    font-size: 14px;
+  }
 }

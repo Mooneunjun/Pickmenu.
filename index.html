@@ -6,7 +6,10 @@
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#333333" />
     <meta id="myMetaTag" name="theme-color" content="#333333" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>오늘 뭐 먹지?</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="modal.css" />
@@ -118,6 +121,26 @@
       </div>
     </footer>
 
+    <script>
+      // 禁止双击放大
+      var lastTouchEnd = 0;
+      document.addEventListener("touchstart", function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      });
+      document.addEventListener(
+        "touchend",
+        function (event) {
+          var now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        },
+        false
+      );
+    </script>
     <script src="script.js"></script>
     <script src="random.js"></script>
     <script src="modal.js"></script>

@@ -93,7 +93,11 @@ button.disabled {
 }
 
 button[type="submit"]:hover {
-  background-color: #19ce60;
+  background-color: #17c25b;
+}
+
+button[type="submit"]:focus {
+  background-color: #0f7e3c;
 }
 
 button.disabled:hover {

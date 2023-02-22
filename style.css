@@ -239,6 +239,13 @@ nav h1 {
   cursor: pointer;
 }
 
+#random-card button:hover {
+  background-color: rgb(32, 32, 32);
+}
+
+#random-card button:focus {
+  background-color: rgb(0, 0, 0);
+}
 #random-result {
   height: 20%;
   font-size: 24px;

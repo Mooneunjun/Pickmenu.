@@ -5,6 +5,9 @@ const offcanvasCloseButton = document.getElementById("offcanvas-close-button");
 const offcanvasOverlay = document.getElementById("offcanvas-overlay");
 var offcanvasLinks = document.querySelectorAll("#offcanvas ul li a");
 
+
+
+
 // 点击 Offcanvas 按钮打开 Offcanvas
 offcanvasButton.addEventListener("click", () => {
   offcanvas.classList.add("open");

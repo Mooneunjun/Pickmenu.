@@ -80,9 +80,6 @@ stars.forEach(function (star, index) {
 var form = document.querySelector("form");
 var submitButton = form.querySelector("button[type=submit]");
 
-// 从localStorage中获取menuList
-var menuList = JSON.parse(localStorage.getItem("menuList")) || [];
-
 // 绑定表单提交事件
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -107,6 +104,9 @@ form.addEventListener("submit", function (e) {
     weight: ratingWeight,
   };
 
+  // 从localStorage中获取menuList
+  var menuList = JSON.parse(localStorage.getItem("menuList")) || [];
+
   // 将新菜单项添加到菜单列表中
   menuList.push(newMenuItem);
   // 将更新后的菜单列表保存到localStorage中
@@ -128,11 +128,11 @@ form.addEventListener("submit", function (e) {
   submitButton.innerHTML = "<div class='loader'></div>";
   setTimeout(function () {
     submitButton.innerHTML = "등록완료";
-  }, 1000);
+  }, 300);
   setTimeout(function () {
     submitButton.innerHTML = "등록";
     // 启用提交按钮
     submitButton.disabled = false;
     submitButton.classList.remove("disabled");
-  }, 2000);
+  }, 1000);
 });

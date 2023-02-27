@@ -2,11 +2,10 @@
 var randomButton = document.getElementById("random-button");
 var randomResult = document.getElementById("random-result");
 
-// 从localStorage中获取menuList
-var menuList = JSON.parse(localStorage.getItem("menuList")) || [];
-
 // 绑定点击事件，实现随机抽选功能
 randomButton.addEventListener("click", function () {
+  // 从localStorage中获取menuList
+  var menuList = JSON.parse(localStorage.getItem("menuList")) || [];
   // 计算权重和概率之和
   var totalWeight = 0;
   for (var i = 0; i < menuList.length; i++) {

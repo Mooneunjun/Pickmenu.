@@ -18,3 +18,9 @@ If you encounter any bugs or issues while using the app, please submit a new iss
 
 ## Contact
 If you have any questions or comments about the app, please contact me at mooneunjun@icloud.com
+
+
+
+# Update 2023.02.27
+Fixed the bug.
+The Delete Menu feature is already available and is currently in the test phase
